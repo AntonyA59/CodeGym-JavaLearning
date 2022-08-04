@@ -1,3 +1,5 @@
+
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,6 +12,7 @@ public class HashMapCat{
 
         for (Map.Entry<String, Chat> paire : map.entrySet()) {
             System.out.println(paire.getKey() + " - " + paire.getValue());
+            
         }
     }
 

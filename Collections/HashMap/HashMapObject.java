@@ -13,8 +13,8 @@ public class HashMapObject {
         map.put("Arbus", false);
         map.put("Bébé", null);
         map.put("Chat", "Chat");
-        map.put("Manger", new Long(56));
-        map.put("Nourriture", new Character('3'));
+        map.put("Manger",  56);
+        map.put("Nourriture", '3');
         map.put("Gevey", '6');
         map.put("Câlins", 111111111111L);
         map.put("Comp", (double) 123);
