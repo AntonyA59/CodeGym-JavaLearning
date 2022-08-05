@@ -1,6 +1,7 @@
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
@@ -31,10 +32,11 @@ public class HashMapBirthday {
 
     public static void supprimerToutesPersonnesEte(HashMap<String, Date> map) {
         HashMap<String, Date> copy = new HashMap<>(map);
-
+        Calendar cal = Calendar.getInstance();
+        
         for(String key : copy.keySet()){
-            Date date = copy.get(key);
-            int month = date.getMonth() + 1;
+            cal.setTime(copy.get(key));
+            int month = cal.get(Calendar.MONTH) + 1;
             if(month == 6 || month == 7 || month == 8){
                 map.remove(key);
             }

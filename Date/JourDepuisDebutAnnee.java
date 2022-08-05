@@ -1,4 +1,5 @@
-import java.util.Date;
+import java.util.Calendar;
+
 
 
 
@@ -6,16 +7,12 @@ import java.util.Date;
 public class JourDepuisDebutAnnee {
     public static void main(String[] args) throws Exception
     {
-        Date dateDebutAnnee = new Date();
-        dateDebutAnnee.setHours(0);
-        dateDebutAnnee.setMinutes(0);
-        dateDebutAnnee.setSeconds(0);
+        Calendar dateDebutAnnee = Calendar.getInstance();
+        dateDebutAnnee.set(dateDebutAnnee.get(Calendar.YEAR), 0, 1, 0, 0, 0);
+
     
-        dateDebutAnnee.setDate(1);      // Premier jour du mois
-        dateDebutAnnee.setMonth(0);     // Janvier (les indices des mois vont de 0 à 11)
-    
-        Date heureActuelle = new Date();
-        long differenceTempsMs = heureActuelle.getTime() - dateDebutAnnee.getTime();
+        Calendar heureActuelle = Calendar.getInstance();
+        long differenceTempsMs = heureActuelle.getTimeInMillis() - dateDebutAnnee.getTimeInMillis();
         long msJour = 24 * 60 * 60 * 1000;  // Le nombre de millisecondes dans 24 heures
     
         int nombreJours = (int) (differenceTempsMs/msJour); // Le nombre de jours complets
