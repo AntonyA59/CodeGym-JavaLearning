@@ -1,4 +1,4 @@
 # CodeGym-JavaLearning
-Some Exercises for learning Java in codeGym website
+Some Exercises for learning Java in [codeGym](https://codegym.cc/)
 
-Website: https://codegym.cc/
+
